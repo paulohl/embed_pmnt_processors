@@ -1,0 +1,23 @@
+\**
+This sample HTML code illustrates a Subscribe button that has PayPal reattempt failed recurring payments before canceling subscriptions.
+**\
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"> 
+  <input type="hidden" name="business" value="alice@mystore.com"> 
+  <!-- Specify a Subscribe button. --> 
+  <input type="hidden" name="cmd" value="_xclick-subscriptions"> 
+  <!-- Identify the subscription. --> 
+  <input type="hidden" name="item_name" value="Alice's Weekly Digest"> 
+  <input type="hidden" name="item_number" value="DIG Weekly"> 
+  <!-- Set the terms of the regular subscription. --> 
+  <input type="hidden" name="currency_code" value="USD"> 
+  <input type="hidden" name="a3" value="19.95"> 
+  <input type="hidden" name="p3" value="1"> 
+  <input type="hidden" name="t3" value="M">
+  <!-- Set recurring payments until canceled. --> 
+  <input type="hidden" name="src" value="1"> 
+  <!-- PayPal reattempts failed recurring payments. --> 
+  <input type="hidden" name="sra" value="1"> 
+  <!-- Display the payment button. --> 
+  <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribe_LG.gif" alt="Subscribe"> 
+  <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" > 
+</form>
