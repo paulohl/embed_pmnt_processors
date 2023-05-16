@@ -1,0 +1,21 @@
+\**
+View Cart: Open shopping cart in the merchant window
+By default, when a buyer clicks a View Cart button, the PayPal shopping cart opens in a separate browser window. You can simplify the shopping experience by opening the PayPal shopping cart in the same browser window.
+
+This sample HTML code illustrates how to open the PayPal shopping cart in the same browser window.
+**\
+<form target="_self" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="kin@kinskards.com">
+
+    <!-- Specify a PayPal shopping cart View Cart button. -->
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="display" value="1">
+
+    <!-- Display the View Cart button. -->
+    <input type="image" name="submit"
+      src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif"
+      alt="Add to Cart">
+    <img alt="" width="1" height="1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
