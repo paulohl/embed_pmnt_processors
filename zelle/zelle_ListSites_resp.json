@@ -18,3 +18,18 @@
     }
   ]
 }
+{
+  "key": "value",
+  "//": "For more information about obtaining and using access tokens, see Access Tokens and Other Square Credentials."
+  "//": "If a seller has multiple sites, you must allow sellers to choose the sites where they want to add your snippet."
+  "//": "You can use the site_title, domain, and other fields from the ListSites response to display the sites to the sellers so they can select the target site or sites."
+  "//": "Then, use the id of the selected site as the site_id parameter in your Snippet API requests."
+  "//": "If the seller has only one site, you can just use the id of the site without prompting the seller to select a site.
+  "//": "Allow the seller to configure the snippet as needed. For example, you might provide custom settings or allow sellers to choose the functionality they want to add to their site. 
+  "//": "Although an application can define only one snippet, you can build your snippet code dynamically per site and concatenate multiple HTML elements.
+  "//": "For each selected site, call UpsertSnippet to add your snippet.
+  "//": "Replace {ACCESS_TOKEN} with your access token.
+  "//": "Replace {{SITE_ID}} with the ID of the target site. You can get this value from the id field in the ListSites response.
+  "//": "Replace the example value in the content field with your snippet code, which can include valid HTML, CSS, and JavaScript. 
+  "//": "The string has a maximum length of 65,535 characters.."
+}
