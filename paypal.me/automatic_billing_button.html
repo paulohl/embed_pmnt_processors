@@ -1,0 +1,40 @@
+\**
+The following sample HTML code illustrates a basic Automatic Billing button, with these features:
+- A text box above the button for buyers to enter a maximum billing limit
+- A minimum billing limit of $240 USD, set by using the min_amount HTML variable
+- The item name and description Regular House Cleaning above the button
+- Buyer's address required during checkout
+**\
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post"> 
+  <!-- Identify your business so that you can bill for payments. --> 
+  <input type="hidden" name="business" value="your-secure-merchant-ID"> 
+  <!-- Specify an Automatic Billing button. --> 
+  <input type="hidden" name="cmd" value="_xclick-auto-billing"> 
+  <!-- Specify details about the automatic billing plan. --> 
+  <input type="hidden" name="currency_code" value="USD"> 
+  <input type="hidden" name="item_name" value="Regular House Cleaning"> 
+  <input type="hidden" name="set_customer_limit" value="max_limit_own"> 
+  <input type="hidden" name="min_amount" value="240.00"> 
+  <!-- Make sure you get the buyer's address during checkout. -- > 
+<input type="hidden" name="no_shipping" value="2"> 
+<!-- Display the description and a text box to enter the maximum. --> 
+  <table> 
+    <tr><td><strong>Regular House Cleaning</strong>
+      </td></tr> 
+    <tr><td>Enter the maximum amount you want to pay each month.
+      </td></tr> 
+    <tr><td>$ <input type="text" name="max_amount" value=""> USD
+      </td></tr> 
+    <!-- Inform buyers of the monthly minimum payment --> 
+    <tr><td>You will pay at least $240.00 USD.
+      </td></tr> 
+  </table> 
+  <!-- Display the Automatic Billing button --> 
+  <table> 
+    <tr><td><i>Sign up for
+      </i></td></tr> 
+    <tr><td><input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_auto_billing_LG.gif" alt="PayPal - The safer, easier way to pay online!">
+  </td></tr> 
+  </table> 
+  <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" 
+       </form>
