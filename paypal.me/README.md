@@ -1,3 +1,9 @@
+***********
+
+All content under this folder retrieved from [PayPal developer website](https://developer.paypal.com/). 
+
+***********
+
 Sample HTML button code 
 =======================
 
