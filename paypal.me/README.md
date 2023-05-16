@@ -44,6 +44,7 @@ The value for the *business* variable must match a confirmed email address on fi
 ### View Cart: Continue shopping on the current merchant web page
 By default, when a buyer clicks a View Cart button, the PayPal shopping cart opens in a separate browser window. You can simplify the shopping experience by opening the PayPal shopping cart in the same browser window.
 This sample HTML code illustrates how to open the PayPal shopping cart in the same browser window.
+
 ![alt text](https://www.paypalobjects.com/webstatic/en_US/developer/docs/pps/demo_add-to-cart-continue-shopping-button.gif "When buyers click View Cart buttons, the PayPal shopping cart page opens. Buyers can see the items in their carts, and they can begin checking out. In addition, buyers can click the Continue Shopping button to return to your website and add more items to their carts.")
 
 
