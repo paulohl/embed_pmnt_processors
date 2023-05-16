@@ -1,0 +1,10 @@
+\**
+While other payment buttons are implemented by HTML form markup, Unsubscribe buttons are image links to the subscription cancellation function on the PayPal website. The URL for the image link is 
+specified with the HREF attribute, and it includes these URL-encoded parameters:
+- cmd – value is _subscr-find, which tells PayPal to cancel the current, active subscription of the PayPal account holder who clicked the Unsubscribe button.
+- alias – value is the secure merchant account ID of the subscription provider's PayPal account. This value is in the My business info section of your PayPal account profile.
+This code implements an Unsubscribe button that lets subscribers cancel their current, active subscriptions.
+**\
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_subscr-find&alias=SGGGX43FAKKXN&switch_classic=true">
+<img src="https://www.paypalobjects.com/en_US/i/btn/btn_unsubscribe_LG.gif">
+</a>
