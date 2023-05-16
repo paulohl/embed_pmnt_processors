@@ -1,0 +1,26 @@
+\**
+View Cart: Continue shopping on the current merchant web page
+When buyers click View Cart buttons, the PayPal shopping cart page opens. Buyers can see the items in their carts, and they can begin checking out. In addition, buyers can click the Continue Shopping button to return to your website and add more items to their carts.
+
+If your website has many product pages, browsers may have difficulty returning buyers to the same product pages that they leave when they click your View Cart buttons. Returning buyers to a different page, such as the home page of your website, degrades the shopping experience for buyers who want to add more items to their carts before checking out.
+
+Use the shopping_url variable to allow PayPal to control which page buyers return to when they click the Continue Shopping button.
+**\
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="kin@kinskards.com">
+
+    <!-- Specify a PayPal shopping cart View Cart button. -->
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="display" value="1">
+
+    <!-- Continue shopping on the current webpage of the merchant site. -->
+    <input type="hidden" name="shopping_url" value="https://example.com/birthday_cards">
+
+    <!-- Display the View Cart button. -->
+    <input type="image" name="submit"
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+       alt="Add to Cart">
+    <img alt="" width="1" height="1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
