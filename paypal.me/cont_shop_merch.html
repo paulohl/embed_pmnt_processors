@@ -1,0 +1,77 @@
+\**
+Continue shopping on the current merchant web page
+When a buyer clicks the Add to Cart button, the PayPal shopping cart page opens. 
+The buyer can see the items in the cart and begin check out or click the Continue Shopping button to return to your website and add more items to the cart.
+
+If your website has many product pages, browsers may have difficulty returning buyers to the same product pages that they leave when they click your 
+Add to Cart buttons. Returning buyers to a different page, such as the home page of your website, degrades the shopping experience for buyers who want to add 
+more items to their carts before checking out.
+
+Use the shopping_url variable to specify which page PayPal returns buyers to when they click the Continue Shopping button. 
+You can set the value of the shopping_url variable if you know the URL for the web page where the button appears. 
+In the code below, the merchant wants to ensure that buyers who click an Add to Cart button for a birthday card return to the product page for birthday cards 
+when they want to continue shopping.
+**\
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="kin@kinskards.com">
+
+    <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="add" value="1">
+
+    <!-- Specify details about the item that buyers will purchase. -->
+    <input type="hidden" name="item_name" value="Birthday Card - Cake and Candle">
+    <input type="hidden" name="amount" value="3.95">
+    <input type="hidden" name="currency_code" value="USD">
+
+    <!-- Continue shopping on the web page for birthday cards -->
+    <input type="hidden" name="shopping_url" value="https://example.com/birthday_cards">
+
+    <!-- Display the payment button. -->
+    <input type="image" name="submit"
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+        alt="Add to Cart">
+    <img alt="" width="1" height="1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
+
+\**
+With a more advanced coding technique, you can add JavaScript functions to your product pages that get the current URL for the web page 
+from the browser and use it as the value of shopping_url. This technique makes your button code portable when copying a button to multiple pages.
+**\
+...
+<script type="text/javascript">
+<!--
+function getContinueShoppingURL(form){
+
+// -- Get the href of the currently displayed webpage --
+form.shopping_url.value = window.location.href;
+}
+//-->
+</script>
+...
+
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="kin@kinskards.com">
+
+    <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="add" value="1">
+
+    <!-- Specify details about the item that buyers will purchase. -->
+    <input type="hidden" name="item_name" value="Birthday Card - Cake and Candle">
+    <input type="hidden" name="amount" value="3.95">
+    <input type="hidden" name="currency_code" value="USD">
+
+    <!-- Continue shopping on the current webpage of the merchant site. -->
+    <!-- The below value is replaced when buyers click Add to Cart -->
+    <input type="hidden" name="shopping_url" value="https://example.com/birthday_cards">
+
+    <!-- Display the payment button. -->
+    <input type="image" name="submit"
+        onclick=getContinueShoppingURL(this.form)
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+        alt="Add to Cart">
+    <img alt="" width="1" height="1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
