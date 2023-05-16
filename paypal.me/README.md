@@ -99,3 +99,15 @@ Product options as text boxes
 Unsubscribe button
 ------------------
 ![alt text](https://www.paypalobjects.com/ppdevdocs/v2noapi/img/docs/buttons/subscribe_options_without_prices.png "This code implements an Unsubscribe button that lets subscribers cancel their current, active subscriptions.")
+
+
+Automatic Billing: Sample HTML button code
+==========================================
+
+Basic Automatic Billing button
+------------------------------
+![alt text](https://www.paypalobjects.com/ppdevdocs/v2noapi/img/docs/buttons/auto-bill-field-prices.png "The sample HTML code displays this basic Automatic Billing button")
+
+Automatic Billing with option limits
+------------------------------------
+![alt text](https://www.paypalobjects.com/ppdevdocs/v2noapi/img/docs/buttons/auto-bill-field-prices.png "The sample HTML code displays this basic Automatic Billing button with option limits")
