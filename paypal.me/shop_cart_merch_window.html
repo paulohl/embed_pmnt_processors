@@ -1,0 +1,31 @@
+\**
+Open shopping cart in the merchant window
+When a buyer clicks the Add to Cart button, the PayPal shopping cart opens in a separate browser window.
+
+You can use the target attribute in the form element to open the PayPal shopping cart in the same browser window that displays your website.
+
+Values for target attribute that open the PayPal shopping cart: | | | |-|-| | Target expression | Where cart opens | | target="paypal" | Separate browser window or browser tab from the merchant website. | | target="_self" | Same browser window or browser tab as the merchant website. |
+
+This sample opens the shopping cart in the same browser window that displays a merchant website.
+**\
+<form target="_self" action="https://www.paypal.com/cgi-bin/webscr"
+        method="post">
+    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="kin@kinskards.com">
+
+    <!-- Specify a PayPal Shopping Cart Add to Cart button. -->
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="add" value="1">
+
+    <!-- Specify details about the item that buyers will purchase. -->
+    <input type="hidden" name="item_name" value="Birthday - Cake and Candle">
+    <input type="hidden" name="amount" value="3.95">
+    <input type="hidden" name="currency_code" value="USD">
+
+    <!-- Display the payment button. -->
+    <input type="image" name="submit"
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+        alt="Add to Cart">
+    <img alt="" width="1" height="1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
