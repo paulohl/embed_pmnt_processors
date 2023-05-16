@@ -1,0 +1,31 @@
+\**
+Flat discount amount
+This sample illustrates a basic Add to Cart button with the following features:
+
+An item named "Birthday - Cake and Candle."
+An item price of $3.95 USD.
+A $2.00 discount applies to the item.
+PayPal calculates tax and shipping based on rates that you set up in your PayPal account. The buyer's PayPal shopping cart opens in a separate browser window or tab.
+**\
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">    <!-- Identify your business so that you can collect the payments. -->
+    <input type="hidden" name="business" value="kin@kinskards.com">
+
+    <!-- Specify a PayPal shopping cart Add to Cart button. -->
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="add" value="1">
+
+    <!-- Specify details about the item that buyers will purchase. -->
+    <input type="hidden" name="item_name" value="Birthday - Cake and Candle">
+    <input type="hidden" name="amount" value="3.95">
+    <input type="hidden" name="currency_code" value="USD">
+
+    <!-- Specify the discount amount that applies to the item. -->
+    <input type="hidden" name="discount_amount" value="2.00">
+
+    <!-- Display the payment button. -->
+    <input type="image" name="submit"
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+        alt="Add to Cart">
+    <img alt="" width="1" height="1"
+        src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>
