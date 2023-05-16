@@ -65,7 +65,6 @@ Product options with prices specify the prices in two places:
 Buy Now button with product options as a text box
 -------------------------------------------------
 ![alt text](https://www.paypalobjects.com/ppdevdocs/v2noapi/img/docs/buttons/img-docs-product-options.svg "This code sample configures a basic Buy Now button with a text box for entering product options.")
-
 Buy Now button that prompts for quantities
 ------------------------------------------
 ![alt text](https://www.paypalobjects.com/ppdevdocs/v2noapi/img/docs/buttons/img-docs-item-quantities.svg "This sample code configures a basic Buy Now button that prompts buyers to specify item quantities. Use this option carefully because buyers might request more items than you have in your inventory.")
