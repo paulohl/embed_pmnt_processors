@@ -46,7 +46,7 @@ To test a purchase:
 
 1. Open your test page with iOS Safari or Android Chrome.
 2. Tap the Venmo button and switch to the Venmo app.
-3. On the Venmo app, tap Continue or Pay Now to return to your test page.
+3. On the Venmo app, tap **Continue** or **Pay Now** to return to your test page.
 4. If you have an additional confirmation page on your website, confirm the payment.
 5. Log in to your business account and confirm that the money you used to pay moved into that account.
 
@@ -58,7 +58,7 @@ If the validation fails, the web browser’s developer console displays warning 
 ## Best practices
 
 ### Enable Venmo as a funding source
-Venmo isn't displayed as a payment option in Checkout integrations by default. Add enable-funding=venmo as a query parameter to your JavaScript SDK _script_ to display Venmo as a payment option. For more information about manually enabling different funding sources, see enable funding.
+Venmo isn't displayed as a payment option in Checkout integrations by default. Add *enable-funding=venmo* as a query parameter to your JavaScript SDK _script_ to display Venmo as a payment option. For more information about manually enabling different funding sources, see enable funding.
 
 ### Allow for Venmo placement
 If you have an existing vertical button stack, an additional Venmo button renders under the stack. Make sure you leave enough room on your page for the Venmo button.
